@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'mailgun'
+
+address = ARGV.shift
+subject = ARGV.shift
+message = ARGV.shift
+
+mg_client = Mailgun::Client.new ENV['MAILGUN_API_KEY']
+
+message_params = {:from    => "postmaster@#{ENV['MAILGUN_DOMAIN']}",
+                  :to      => address,
+                  :subject => subject,
+                  :text    => message}
+
+mg_client.send_message ENV['MAILGUN_DOMAIN'], message_params

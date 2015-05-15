@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ps -ef | grep $@ | grep -v 'grep' | grep -v $0

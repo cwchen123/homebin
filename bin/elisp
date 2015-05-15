@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -n "$DEBUG" ]; then
+    emacs --user `whoami` --script "$@"
+else
+    emacs --user `whoami` --script "$@" 2>/dev/null
+fi
