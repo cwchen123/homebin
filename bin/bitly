@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'bitly'
+
+bitly = Bitly.new ENV['BITLY_USERNAME'], ENV['BITLY_API_KEY']
+
+url = ARGV.shift
+
+raise "No url" unless url
+
+puts bitly.shorten(url).short_url

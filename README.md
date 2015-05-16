@@ -4,6 +4,10 @@ My own handy scripts.
 
 ## Usage
 
+### bitly
+
+Generate short url.  Two environment variables **BITLY_USERNAME** and  **BITLY_API_KEY** are needed to use the command.
+
 ### check
 
 Check whether a process is running.  `grep` is excluded.
