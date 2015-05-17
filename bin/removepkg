@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby -w
+require 'optparse'
+
+options = Hash.new
+OptionParser.new do |opts|
+  options = Hash.new
+  opts.banner = "Usage: remove_pkg package"  
+
+  opts.on("-v", "--verbose", "Show the file lists") do
+    options[:verbose] = TRUE
+  end
+
+  opts.on("--dry", "Only dry run, don't delete files") do
+    options[:verbose] = TRUE
+    options[:dry] = TRUE
+  end
+
+  opts.on_tail("-h", "--help", "Show this help message") do
+    puts opts
+    exit
+  end
+end.parse!
+
+if ARGV.empty? then
+  exec("#{$0} -h")
+end
+
+ARGV.each do |arg|
+  query = `pkgutil --pkg-info #{arg}`
+  query =~ /volume: ([^ ]+)$/
+  root = $1
+  files = `pkgutil --only-files --files #{arg}`
+  files = files.split("\n").map {|file| root + file}
+  dirs = `pkgutil --only-dirs --files #{arg}`
+  dirs = dirs.split("\n").map {|dir| root + dir}
+
+  if options[:verbose] then
+    alls = `pkgutil --files #{arg}`
+    puts alls.split("\n").map {|f| root + f}
+  end
+
+  files.each do |file|
+    if not options[:dry] then
+      File.delete(file)
+    end
+  end
+
+  dirs.reverse.each do |dir|
+    if not options[:dry] then
+      if Dir.entries(dir).length <= 2 then
+        Dir.rmdir(dir)
+      end
+    end
+  end
+end

@@ -6,7 +6,7 @@ My own handy scripts.
 
 ### bitly
 
-Generate short url.  Two environment variables **BITLY_USERNAME** and  **BITLY_API_KEY** are needed to use the command.
+(Deprecated) Generate short url.  Two environment variables **BITLY_USERNAME** and  **BITLY_API_KEY** are needed to use the command.
 
 ### check
 
@@ -27,6 +27,14 @@ $ DEBUG=1 elisp script.el
 ### mail
 
 Send mail by Mailgun Ruby API.  You need a personal domain and a Mailgun account to use the script.  Besides, set the two environment variable **MAILGUN_API_KEY** and **MAILGUN_DOMAIN**.
+
+### podweb
+
+Call `podwebserver` if no podwebserver process initiated.  Perl module `Pod-Webserver` needed.
+
+### removepkg
+
+Remove pkg on Mac.
 
 ## License
 
