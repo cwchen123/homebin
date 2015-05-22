@@ -1,4 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 # See the command `check` for the detail
 # Overall `check` check whether a process exist.
-check $@ | grep -v "$0" | awk '{ print $2 }'
+PID=$(check $@ | grep -v "$0" | awk '{ print $2 }')
+
+if [[ -z $PID ]]; then
+    exit 1
+else
+    echo $PID
+    exit 0
+fi

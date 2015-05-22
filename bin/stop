@@ -1,0 +1,5 @@
+#!/bin/sh
+pid $1 2>&1 1>/dev/null
+if [ -n $? ]; then
+   kill -15 $(pid $1)
+fi

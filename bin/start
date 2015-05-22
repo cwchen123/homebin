@@ -1,0 +1,6 @@
+#!/bin/sh
+pid $1 2>&1 1>/dev/null
+if [ -n $? ]; then
+    echo "start $1"
+    cd && nohup "$@" 1>"$1.log" 2>"$1.err" &
+fi

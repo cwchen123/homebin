@@ -4,6 +4,10 @@ My own handy scripts.
 
 ## Usage
 
+Add the *bin* sub-directory to PATH variable.
+
+## Available Commands
+
 ### bitly
 
 (Deprecated) Generate short url.  Two environment variables **BITLY_USERNAME** and  **BITLY_API_KEY** are needed to use the command.
@@ -24,7 +28,7 @@ $ elisp script.el
 $ DEBUG=1 elisp script.el
 ```
 
-### mail
+### mailto
 
 Send mail by Mailgun Ruby API.  You need a personal domain and a Mailgun account to use the script.  Besides, set the two environment variable **MAILGUN_API_KEY** and **MAILGUN_DOMAIN**.
 
@@ -38,7 +42,15 @@ Call `podwebserver` if no podwebserver process initiated.  Perl module `Pod-Webs
 
 ### removepkg
 
-Remove pkg on Mac.
+Remove pkg package on Mac.
+
+### start
+
+Start a persisting background process.  It changes to home root directory and left log files there.  Use the command `pid` internally.
+
+### stop
+
+Stop a persisting background process.  Use the command `pid` internally.
 
 ## License
 
