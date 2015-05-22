@@ -28,6 +28,10 @@ $ DEBUG=1 elisp script.el
 
 Send mail by Mailgun Ruby API.  You need a personal domain and a Mailgun account to use the script.  Besides, set the two environment variable **MAILGUN_API_KEY** and **MAILGUN_DOMAIN**.
 
+### pid
+
+Check the pid of the process by name.  Use `check` internally.
+
 ### podweb
 
 Call `podwebserver` if no podwebserver process initiated.  Perl module `Pod-Webserver` needed.

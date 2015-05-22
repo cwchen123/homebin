@@ -1,0 +1,4 @@
+#!/bin/sh
+# See the command `check` for the detail
+# Overall `check` check whether a process exist.
+check $@ | grep -v "$0" | awk '{ print $2 }'
