@@ -1,6 +1,6 @@
 # Michael's homebin
 
-My own handy scripts.
+Some handy scripts.
 
 ## Usage
 
@@ -51,6 +51,10 @@ Start a persisting background process.  It changes to home root directory and le
 ### stop
 
 Stop a persisting background process.  Use the command `pid` internally.
+
+### unpack
+
+Decompress various file formats.  It needs 7z, unrar, unzip, and miscellaneous decompressing tools.
 
 ## License
 
