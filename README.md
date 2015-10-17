@@ -16,6 +16,10 @@ Add the *bin* sub-directory to PATH variable.
 
 Check whether a process is running.  `grep` is excluded.
 
+### body
+
+Execute command except header part.  From Data Science at the Command Line.
+
 ### elisp
 
 Use Emacs as an interpreter.  By default, error message is suppressed.
@@ -27,6 +31,10 @@ $ elisp script.el
 # Show stdout and stderr.
 $ DEBUG=1 elisp script.el
 ```
+
+### header
+
+Add, remove and edit header of a CSV file.  From Data Science at the Command Line.
 
 ### mailto
 
@@ -54,7 +62,11 @@ Stop a persisting background process.  Use the command `pid` internally.
 
 ### unpack
 
-Decompress various file formats.  It needs 7z, unrar, unzip, and miscellaneous decompressing tools.
+Decompress various file formats.  It needs 7z, unrar, unzip, and miscellaneous decompressing tools.  From Data Science at the Command Line.
+
+## Reference
+
+Data Science at the Command Line (http://datascienceatthecommandline.com/)
 
 ## License
 
