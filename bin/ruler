@@ -1,0 +1,17 @@
+#!/usr/bin/gawk -f
+
+BEGIN {
+   command = "tput cols";
+   command | getline col;
+   close(col);
+
+   for ( i = 1;  i <= col / 10;  ++i ) {
+         printf "        " (i<10? " " : "") i   #  eight spaces + 1 possible
+   }
+   printf "\n";
+
+   for ( i = 1;  i <= col;  ++i ) {
+         printf i % 10;
+   }
+   printf "\n"
+}

@@ -48,6 +48,10 @@ Check the pid of the process by name.  Use `check` internally.
 
 Call `podwebserver` if no podwebserver process initiated.  Perl module `Pod-Webserver` needed.
 
+### ruler
+
+Show a ruler on command line.  Example: `ruler; ls -l; ruler`.
+
 ### removepkg
 
 Remove pkg package on Mac.
