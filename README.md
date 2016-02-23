@@ -52,6 +52,14 @@ Start a persisting background process.  It changes to home root directory and le
 
 Stop a persisting background process.  Use the command `pid` internally.
 
+### weather 
+
+Query weather from the command line.  Use http://wttr.in internally.
+
+```
+$ weather taipei
+```
+
 ## License
 
 MIT
