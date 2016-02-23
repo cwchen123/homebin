@@ -1,6 +1,6 @@
 # Michael's homebin
 
-My own handy scripts.
+Some handy scripts.
 
 ## Usage
 
@@ -16,6 +16,10 @@ Add the *bin* sub-directory to PATH variable.
 
 Check whether a process is running.  `grep` is excluded.
 
+### body
+
+Execute command except header part.  From Data Science at the Command Line.
+
 ### elisp
 
 Use Emacs as an interpreter.  By default, error message is suppressed.
@@ -28,6 +32,10 @@ $ elisp script.el
 $ DEBUG=1 elisp script.el
 ```
 
+### header
+
+Add, remove and edit header of a CSV file.  From Data Science at the Command Line.
+
 ### mailto
 
 Send mail by Mailgun Ruby API.  You need a personal domain and a Mailgun account to use the script.  Besides, set the two environment variable **MAILGUN_API_KEY** and **MAILGUN_DOMAIN**.
@@ -39,6 +47,10 @@ Check the pid of the process by name.  Use `check` internally.
 ### podweb
 
 Call `podwebserver` if no podwebserver process initiated.  Perl module `Pod-Webserver` needed.
+
+### ruler
+
+Show a ruler on command line.  Example: `ruler; ls -l; ruler`.
 
 ### removepkg
 
@@ -59,6 +71,14 @@ Query weather from the command line.  Use http://wttr.in internally.
 ```
 $ weather taipei
 ```
+### unpack
+
+Decompress various file formats.  It needs 7z, unrar, unzip, and miscellaneous decompressing tools.  From Data Science at the Command Line.
+
+## Reference
+
+Data Science at the Command Line (http://datascienceatthecommandline.com/)
+>>>>>>> e4636efbf54719f3562c4f0f46d77dacc3192673
 
 ## License
 
