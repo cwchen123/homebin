@@ -6,11 +6,12 @@ Some handy scripts.
 
 Add the *bin* sub-directory to PATH variable.
 
+
 ## Available Commands
 
 ### bitly
 
-(Deprecated) Generate short url.  Two environment variables **BITLY_USERNAME** and  **BITLY_API_KEY** are needed to use the command.
+Generate short url.  Now use Bitly api ver 3. **BITLY_ACCESS_TOKEN** environment variable is needed to use the command.
 
 ### check
 
@@ -71,14 +72,17 @@ Query weather from the command line.  Use http://wttr.in internally.
 ```
 $ weather taipei
 ```
+
 ### unpack
 
 Decompress various file formats.  It needs 7z, unrar, unzip, and miscellaneous decompressing tools.  From Data Science at the Command Line.
+
 
 ## Reference
 
 Data Science at the Command Line (http://datascienceatthecommandline.com/)
 >>>>>>> e4636efbf54719f3562c4f0f46d77dacc3192673
+
 
 ## License
 

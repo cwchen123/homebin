@@ -2,10 +2,17 @@
 
 require 'bitly'
 
-bitly = Bitly.new ENV['BITLY_USERNAME'], ENV['BITLY_API_KEY']
+Bitly.use_api_version_3
+
+Bitly.configure do |config|
+  config.api_version = 3
+  config.access_token = ENV['BITLY_ACCESS_TOKEN']
+end
+
+#bitly = Bitly.new ENV['BITLY_USERNAME'], ENV['BITLY_API_KEY']
 
 url = ARGV.shift
 
 raise "No url" unless url
 
-puts bitly.shorten(url).short_url
+puts Bitly.client.shorten(url).short_url
